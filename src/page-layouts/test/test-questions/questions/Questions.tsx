@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { FiArrowRight, FiArrowLeft, FiMoreVertical } from 'react-icons/fi'
+import { FiArrowRight, FiMoreVertical } from 'react-icons/fi'
 import { withTranslation } from '@i18n'
 import { useToasts } from 'react-toast-notifications'
 import { calculateResults } from 'psychology'
@@ -9,8 +9,9 @@ import { AnswerType, globalStoreType, IQuestion, QuestionsProps } from '../../..
 import RadioGroupItem from '../radio-group-item/RadioGroupItem'
 import style from './questions.module.scss'
 import { checkAnswers, isBrowser } from '../../../../helper/helper'
+import { fakeData } from './fakeData.json'
 
-const Questions = ({ changeBlock, t, questionsSubmit }: QuestionsProps) => {
+const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
     const { addToast } = useToasts()
     const { isLoggedIn } = useSelector((state: globalStoreType) => state.user)
 
@@ -40,9 +41,15 @@ const Questions = ({ changeBlock, t, questionsSubmit }: QuestionsProps) => {
             </div>
             <div className={style.buttons}>
                 <Button
-                    handle={testSubmit}
+                    handle={() => testSubmit(answers)}
                     btnClass="btn btn-accent"
                     title={t('common:buttons.send')}
+                    endIcon={<FiArrowRight />}
+                />
+                <Button
+                    handle={() => testSubmit(fakeData)}
+                    btnClass="btn btn-accent"
+                    title="FAKE ANSWERS"
                     endIcon={<FiArrowRight />}
                 />
                 {isLoggedIn && (
@@ -61,11 +68,11 @@ const Questions = ({ changeBlock, t, questionsSubmit }: QuestionsProps) => {
         </>
     )
 
-    function testSubmit() {
-        const check: number = checkAnswers(answers)
+    function testSubmit(answersObj) {
+        const check: number = checkAnswers(answersObj)
         if (check === -1) {
             // @ts-ignore
-            questionsSubmit(calculateResults(answers))
+            questionsSubmit(calculateResults(answersObj))
         } else if (isBrowser && check !== -1) {
             addToast(t('test:errors.all_q_required'), {
                 appearance: 'error'

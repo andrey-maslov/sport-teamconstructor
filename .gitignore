@@ -21,6 +21,7 @@
 .idea
 next.config.js
 package-lock.json
+staff.csv
 
 # debug
 npm-debug.log*

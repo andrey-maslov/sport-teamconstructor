@@ -31,6 +31,30 @@
   }
 }
 
+.name {
+  margin-bottom: 20px;
+
+  input {
+    display: inline-block;
+    max-width: 340px;
+    margin-bottom: 10px;
+  }
+
+  &.error {
+
+    input {
+      border-color: rgba($danger, .5);
+    }
+  }
+}
+
+.nameError {
+  color: $danger;
+  font-size: 12px;
+}
+
+
+
 @media(max-width: 600px) {
 
   .info {

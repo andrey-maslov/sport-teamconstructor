@@ -23,7 +23,6 @@ const TestMainContent: React.FC<{ t }> = ({ t }) => {
                     </div>
                     <div className="col-xl-7">
                         <div className={style.content}>
-                            <p className={style.pretitle}>{t('test:page.pretitle')}</p>
                             <h1>{t('test:page.title')}</h1>
                             <div
                                 dangerouslySetInnerHTML={{

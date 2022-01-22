@@ -28,8 +28,8 @@ export const SAVE_PERSONAL_INFO = 'SAVE_PERSONAL_INFO'
 // export const SEND_TEST_DATA = 'SEND_TEST_DATA'
 export const FETCH_TERMS = 'FETCH_TERMS'
 export const FETCH_TEST_DESC = 'FETCH_TEST_DESC'
-export const PSYCHO_RESULT = 'PSYCHO_RESULT'
 export const CLEAR_TEST_DATA = 'CLEAR_TEST_DATA'
+export const PSYCHO_RESULT = 'PSYCHO_RESULT'
 
 /*= ==== UTILS ===== */
 export const SET_SORTING = 'SET_SORTING'

@@ -6,9 +6,12 @@ import { savePersonalInfo, saveTestData } from '../actionCreator'
 import { getAuthConfig, getDecodedTestData, testApiUrl } from './utils'
 
 export function sendTestData(): unknown {
-    const token = getCookieFromBrowser('token')
+    // const token = getCookieFromBrowser('token')
+    const token = 'dsfsdfsdf'
     return (dispatch, getState: () => globalStoreType) => {
-        const { test: { personalInfo, testData } } = getState()
+        const {
+            test: { personalInfo, testData }
+        } = getState()
         const encData: string = btoa(JSON.stringify([personalInfo, testData]))
         const data = { value: encData, type: 0 }
 
@@ -39,5 +42,26 @@ export function fetchTestData(token: string): unknown {
         } else {
             dispatch({ type: CLEAR_USER_DATA })
         }
+    }
+}
+
+export const saveUsersData = (start, teammate) => {
+    return (dispatch, getState) => {
+        const { personalInfo, testData } = getState().test
+        axios
+            .post('/save-data', {
+                personalInfo,
+                testData,
+                teammate,
+                start,
+                end: new Date().getTime()
+            })
+            .then(res => {
+                console.log('Спасибо за участие')
+            })
+            .catch(err => {
+                console.error(err)
+                alert('Что-то пошло не так...')
+            })
     }
 }

@@ -8,7 +8,7 @@ export default function TopLogo() {
                 <a>
                     {/* <img src="/img/logo.svg" alt="results" /> */}
                     <span>
-                        Test for <b>EPAM</b>ers
+                        <b>CTI</b> Psychological Test
                     </span>
                 </a>
             </Link>

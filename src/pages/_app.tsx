@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, isConsented }) {
     return (
         <Provider store={store}>
             <ToastProvider autoDismiss autoDismissTimeout={5000} placement="bottom-left">
-                <YMInitializer accounts={[71453749]} options={{ webvisor: true }} version="2" />
+                {/* <YMInitializer accounts={[71453749]} options={{ webvisor: true }} version="2" /> */}
                 <ScrollToTop />
                 <Component {...pageProps} />
                 <SVGSource />
