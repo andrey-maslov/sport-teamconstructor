@@ -1,0 +1,91 @@
+@import '../../../../assets/scss/vars';
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+  //font-size: 1.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: .5rem .6rem;
+  height: 2.3rem;
+  background-color: transparent;
+  border: 1px solid rgba($accent, .2);
+  line-height: 37px;
+  width: 4.5rem;
+  border-radius: $border-radius-sm;
+  align-self: stretch;
+  color: $accent;
+  font-size: 1.2rem;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($accent, .2);
+  }
+}
+
+.top {
+  background-color: $accent;
+  font-family: $title-font;
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
+
+  svg {
+    position: relative;
+    bottom: -3px;
+    margin-right: 1.25rem;
+  }
+}
+
+.links {
+  min-width: 20rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid $grey-bg;
+
+  a {
+    color: $text;
+    text-decoration: none;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: .8rem 1rem;
+    transition: background-color .2s ease-in-out;
+    border-bottom: 1px solid $grey-bg;
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $grey-bg;
+    }
+
+    span {
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    svg {
+      position: relative;
+      bottom: -3px;
+      margin-right: 1.25rem;
+    }
+  }
+}

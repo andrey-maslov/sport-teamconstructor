@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "<span>AI</span> valuation of your market salary for different locations",
+    "subtitle": "Know your salary estimation in dozens of cities around the world",
+    "btn_cta": "Start!"
+  },
+  "dropzone": {
+    "desc": "Create a free account, upload your CV to our service and get an estimation of your salary in more than 20 cities over the world",
+    "instruction": "<span>Choose file</span> or drug it here",
+    "standard": "Standardized formats are preferred",
+    "etc": "etc.",
+    "format_error": "This file has not accepted type. Only following file types are accepted:",
+    "unlogged_error": "Log in first",
+    "btn_cta": "send"
+  },
+  "about": {
+    "title": "About our project",
+    "content_list": [
+      "Our goal is to build an accurate AI tool of market salary instant analytics based on CV profile. Multiple data sources are used for that goal, but the main is your feedback. So, please, specify your real salary, it will help us to train the neural network in a best way. Of course, dynamics is very important, because market is changing rapidly from time to time",
+      "Current state is trained on data collected during second half of 2019. We are working to adapt data for current situation, but please be forgiving of our possible mistakes, because we are only beta now",
+      "In future we plan to provide more tools of analytics, including psychological tests and support for those who want to find a new job",
+      "Please send all your feedback to our email"
+    ]
+  },
+  "features": {
+    "title": "Features",
+    "desc": "",
+    "btn_cta": "",
+    "features_list": [
+      {
+        "title": "CV estimation",
+        "desc": "first feature description"
+      },
+      {
+        "title": "Psychological profile",
+        "desc": "Description for second feature"
+      },
+      {
+        "title": "Other services  integration",
+        "desc": "Description for third feature"
+      }
+    ]
+  },
+  "prices": {
+    "title": "Pricing policy",
+    "desc": "Our service is completely free. However, if you don't want your resume to be the public, you need to pay an annual subscription in the amount of $2.99",
+    "btn_cta": "buy subscription"
+  },
+  "cv": {
+    "title": "CV estimation",
+    "desc": "CV estimation by cities",
+    "btn_cta": "Estimate CV!"
+  },
+  "test": {
+    "title": "Psychological test",
+    "desc": "Spend 15 minutes of your time taking a quick psychological test. You will find out our talents and strength together with tools for building effective relationships. You will also get an encrypted result of the passed test, which can be used in our other services.",
+    "features_title": "How can a test help?",
+    "features_list": [
+      "A complete characteristic of a person's personality, his innate strengths and weaknesses, the optimal communication format",
+      "Vocational guidance, determination of the work to which a person has the maximum inclination (work with people, work with systems, creative work)",
+      "Determination of the best teaching methods for a specific person according to his psychotype (visual, verbal, text, etc.)",
+      "Determination of emotional burnout and stress (test shoud be passed from time to time), determination of stress behavior type"
+    ],
+    "btn_cta": "take the test"
+  }
+}

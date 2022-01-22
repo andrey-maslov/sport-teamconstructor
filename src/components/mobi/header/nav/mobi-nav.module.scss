@@ -1,0 +1,138 @@
+@import '../../../../assets/scss/vars';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: -webkit-transform .4s ease-out 0s;
+  transition: transform .4s ease-out 0s;
+  will-change: transform;
+  overflow-y: auto;
+  background-color: #fff;
+  width: 70%;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(#000, .2);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  transition: background-color 0.2s ease-out 0s, visibility 0.1s ease-out 0s;
+
+  .wrapper {
+    //position: relative;
+    height: 100%;
+    transform: translateX(-110%);
+    z-index: 3;
+  }
+
+  .closure {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &.opened {
+    z-index: 1;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    right: 0;
+    bottom: 0;
+
+    .wrapper {
+      transform: translateX(0%);
+    }
+  }
+}
+
+.title {
+  border-bottom: 1px solid rgba($grey, .3);
+  padding: 1.5rem 0 1.2rem;
+  line-height: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+.item {
+  border-bottom: 1px solid $grey-bg;
+
+  a {
+    display: flex;
+    font-size: 1.2rem;
+    padding: 1.5rem .8rem;
+    border-left: 5px solid transparent;
+    line-height: 1;
+    color: $text;
+    text-decoration: none;
+  }
+
+  &.active {
+    background-color: rgba($accent, .1);
+
+    a {
+      color: $accent;
+      border-color: $accent;
+    }
+  }
+
+  &:hover, &:active  {
+    color: $accent;
+    border-color: $accent;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+ul.auth {
+  list-style: none;
+  margin: 0;
+  padding: 2rem 1rem;
+  flex-grow: 1;
+
+  li {
+    display: block;
+    margin-bottom: 1rem;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: $grey-bg;
+
+  & > div:not(.copy) {
+    border: 1px solid darken($grey-bg, 10%);
+    border-radius: $border-radius-sm;
+  }
+}
+
+.copy {
+
+}
+
