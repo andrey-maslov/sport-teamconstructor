@@ -2,7 +2,6 @@ import { withTranslation } from '@i18n'
 import style from './social.module.scss'
 import { GoogleLogin } from '../google-login/GoogleLogin'
 import { FacebookLoginBtn } from '../facebook-login/FacebookLoginBtn'
-import { LinkedinLogin } from '../linkedin-login/LinkedinLogin'
 
 const SocialAuth = ({ t }) => {
     const isEnabled = true
@@ -21,7 +20,7 @@ const SocialAuth = ({ t }) => {
                     />
                 </div>
                 <div className={style.item}>
-                    <LinkedinLogin isEnabled={isEnabled} />
+                    {/* <LinkedinLogin isEnabled={isEnabled} /> */}
                 </div>
             </div>
         </div>
