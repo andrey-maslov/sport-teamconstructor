@@ -8,7 +8,7 @@ import Button from '../../../../components/common/buttons/button/Button'
 import { AnswerType, globalStoreType, IQuestion, QuestionsProps } from '../../../../typings/types'
 import RadioGroupItem from '../radio-group-item/RadioGroupItem'
 import style from './questions.module.scss'
-import {checkAnswers, isBrowser, scrollToElement} from '../../../../helper/helper'
+import { checkAnswers, isBrowser, scrollToElement } from '../../../../helper/helper'
 import { fakeData } from './fakeData.json'
 
 const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
@@ -46,12 +46,12 @@ const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
                     title={t('common:buttons.send')}
                     endIcon={<FiArrowRight />}
                 />
-                <Button
-                    handle={() => testSubmit(fakeData)}
-                    btnClass="btn btn-accent"
-                    title="FAKE ANSWERS"
-                    endIcon={<FiArrowRight />}
-                />
+                {/* <Button */}
+                {/*    handle={() => testSubmit(fakeData)} */}
+                {/*    btnClass="btn btn-accent" */}
+                {/*    title="FAKE ANSWERS" */}
+                {/*    endIcon={<FiArrowRight />} */}
+                {/* /> */}
                 {isLoggedIn && (
                     <button
                         onClick={() => {

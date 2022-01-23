@@ -6,7 +6,7 @@
         "name_error": "Enter your name, please"
     },
     "page": {
-        "title": "FC 'SHAKHTER' testing",
+        "title": "Express test to determine the psychological profile",
         "test_block_desc": "Make sure you are mentally stable and at rest before taking the test. Taking a stress test can have a big impact on your results. In the first block, tell us a little about yourself:",
         "content": "<p>Ниже вам представлены 75 вопросов теста. В каждом из них вам необходимо выбрать какое из двух утверждений вам ближе, где 1 - однозначно ближе первое утверждение, 5 - однозначно ближе второе, 3 - оба утверждения одинаково близки/далеки.</p><p>НЕПРАВИЛЬНЫХ ОТВЕТОВ НЕТ. Этот тест поможет нам лучше узнать ваши поведенческие и коммуникативные навыки, что позволит выработать индивидуальный подход и подобрать вам наилучших партнёров. Неправильных людей тоже нет, есть просто неподходящие сочетания. Поэтому отнеситесь к ответам на тест серьёзно, но при этом постарайтесь пройти его в спокойной обстановке, без стресса. Прохождение опросника займёт у вас около 15 минут.</p>",
         "thanx": "Thank you, your result has been recorded.",
