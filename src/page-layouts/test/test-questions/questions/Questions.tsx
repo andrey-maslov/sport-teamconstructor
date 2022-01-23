@@ -46,12 +46,13 @@ const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
                     title={t('common:buttons.send')}
                     endIcon={<FiArrowRight />}
                 />
-                <Button
-                    handle={() => testSubmit(fakeData)}
-                    btnClass="btn btn-accent"
-                    title="FAKE ANSWERS"
-                    endIcon={<FiArrowRight />}
-                />
+                {/* button to set fake answers for test */}
+                {/* <Button */}
+                {/*    handle={() => testSubmit(fakeData)} */}
+                {/*    btnClass="btn btn-accent" */}
+                {/*    title="FAKE ANSWERS" */}
+                {/*    endIcon={<FiArrowRight />} */}
+                {/* /> */}
                 {isLoggedIn && (
                     <button
                         onClick={() => {
