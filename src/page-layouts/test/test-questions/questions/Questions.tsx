@@ -8,7 +8,7 @@ import Button from '../../../../components/common/buttons/button/Button'
 import { AnswerType, globalStoreType, IQuestion, QuestionsProps } from '../../../../typings/types'
 import RadioGroupItem from '../radio-group-item/RadioGroupItem'
 import style from './questions.module.scss'
-import { checkAnswers, isBrowser } from '../../../../helper/helper'
+import {checkAnswers, isBrowser, scrollToElement} from '../../../../helper/helper'
 import { fakeData } from './fakeData.json'
 
 const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
@@ -46,13 +46,12 @@ const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
                     title={t('common:buttons.send')}
                     endIcon={<FiArrowRight />}
                 />
-                {/* button to set fake answers for test */}
-                {/* <Button */}
-                {/*    handle={() => testSubmit(fakeData)} */}
-                {/*    btnClass="btn btn-accent" */}
-                {/*    title="FAKE ANSWERS" */}
-                {/*    endIcon={<FiArrowRight />} */}
-                {/* /> */}
+                <Button
+                    handle={() => testSubmit(fakeData)}
+                    btnClass="btn btn-accent"
+                    title="FAKE ANSWERS"
+                    endIcon={<FiArrowRight />}
+                />
                 {isLoggedIn && (
                     <button
                         onClick={() => {
@@ -79,12 +78,7 @@ const Questions = ({ t, questionsSubmit }: QuestionsProps) => {
                 appearance: 'error'
             })
             // scroll to first not answered question
-            const targetElem: any = document.querySelector(
-                `.visible [data-item-index="${check + 1}"]`
-            )
-            if (targetElem) {
-                targetElem.scrollIntoView({ block: 'center', behavior: 'smooth' })
-            }
+            scrollToElement(`.visible [data-item-index="${check + 1}"]`)
         }
     }
 

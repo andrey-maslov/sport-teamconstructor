@@ -14,7 +14,7 @@ import {
     saveUsersData
 } from '../../../actions/actionCreator'
 import { TEST_THRESHOLD } from '../../../constants/constants'
-import { isTestPassed } from '../../../helper/helper'
+import { isTestPassed, scrollToElement } from '../../../helper/helper'
 
 const personalInfo = [0, 0, 0]
 
@@ -67,7 +67,9 @@ const Test = ({ t }) => {
                         setTeammate(e.target.value)
                     }}
                 />
-                {isNameError && <div className={style.nameError}>{t('test:page.name_error')}</div>}
+                {isNameError && (
+                    <div className={style.nameError}>{t('test:errors.name_error')}</div>
+                )}
             </div>
             <Questions changeBlock={null} questionsSubmit={testSubmit} />
         </div>
@@ -81,6 +83,7 @@ const Test = ({ t }) => {
         const isPassed = isTestPassed(fullResult[1], TEST_THRESHOLD)
         if (!teammate) {
             setNameError(true)
+            scrollToElement('input[name=teammate]')
             return
         }
         if (isPassed) {

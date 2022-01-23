@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { CONTENT_API, currencies, locations } from '../constants/constants'
 import { AnswerType } from '../typings/types'
-import { baseTestResultType, DecodedDataType, IUserResult } from "psychology/build/main/types/types";
-import { UserResult } from "psychology";
+import { baseTestResultType, DecodedDataType, IUserResult } from 'psychology/build/main/types/types'
+import { UserResult } from 'psychology'
 
 // export const getLocation = (city = '', locationsArr = locations) => {
 //
@@ -205,4 +205,15 @@ export function isTestPassed(testResult: baseTestResultType, threshold): boolean
     }
     const fullProfile: IUserResult = UserResult(testResult)
     return fullProfile.mainOctant.value > threshold
+}
+
+export const scrollToElement = (elem: string): void => {
+    if (!isBrowser || typeof elem !== 'string') {
+        return
+    }
+
+    const targetElem: any = document.querySelector(elem)
+    if (targetElem) {
+        targetElem.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    }
 }
