@@ -7,8 +7,8 @@
     },
     "page": {
         "title": "Express test to determine the psychological profile",
-        "test_block_desc": "Make sure you are mentally stable and at rest before taking the test. Taking a stress test can have a big impact on your results. In the first block, tell us a little about yourself:",
-        "content": "<p>Ниже вам представлены 75 вопросов теста. В каждом из них вам необходимо выбрать какое из двух утверждений вам ближе, где 1 - однозначно ближе первое утверждение, 5 - однозначно ближе второе, 3 - оба утверждения одинаково близки/далеки.</p><p>НЕПРАВИЛЬНЫХ ОТВЕТОВ НЕТ. Этот тест поможет нам лучше узнать ваши поведенческие и коммуникативные навыки, что позволит выработать индивидуальный подход и подобрать вам наилучших партнёров. Неправильных людей тоже нет, есть просто неподходящие сочетания. Поэтому отнеситесь к ответам на тест серьёзно, но при этом постарайтесь пройти его в спокойной обстановке, без стресса. Прохождение опросника займёт у вас около 15 минут.</p>",
+        "test_block_desc": "Make sure you are mentally stable and at rest before taking the test. Taking a stress test can have a big impact on your results.",
+        "content": "<p>Below you can see 75 questions of the test. In each of them, you need to choose which of the two statements is closer to you, where 1 - the first statement is unambiguously closer, 5 - the second statement is unambiguously closer, 3 - both statements are equally close / far.</p><p>THERE ARE NO WRONG ANSWERS. This test will help us to better understand your behavioral and communication skills, which will allow us to develop an individual approach and find the best partners for you. There are no wrong people either, there are just inappropriate combinations. Therefore, take the test answers seriously, but at the same time try to pass it in a calm, stress-free environment. The questionnaire will take approximately 15 minutes to complete.</p>",
         "thanx": "Thank you, your result has been recorded.",
         "enter_name": "Enter you name and surname"
     },
